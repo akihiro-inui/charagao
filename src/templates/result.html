@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% if similar_image_path%}
+    <div class="result_box" style="text-align: center">
+            <div class="caption" style="padding: 50px 2px;">
+                <h2>このキャラって感じ</h2>
+            </div>
+            <img src="data:image/png;base64,{{input_image_data}}" class="rounded" alt="Original" style="width:20%;">
+            <img src="{{ similar_image_path }}" class="rounded" alt="Character" style="width:20%;">
+        {% else %}
+            <h1>no image for whatever reason</h1>
+        {% endif %}
+        <form method="POST" action="/retry" enctype="multipart/form-data">
+            <button id="retry_button" name="retry" class="btn btn-success" style="margin-top: 40px;">
+                Try Again
+            </button>
+        </form>
+    </div>
+{% endblock %}

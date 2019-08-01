@@ -1,0 +1,4 @@
+turicreate
+flask
+werkzeug
+Pillow

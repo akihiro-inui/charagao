@@ -1,0 +1,40 @@
+body {
+    font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif, 'Kano regular', Blern;
+}
+
+*{
+    margin:0;
+    padding:0;
+    -webkit-text-size-adjust: 100%;
+}
+
+.block{
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    margin: 10% auto;
+    text-align: center;
+}
+
+
+.filelabel {
+    opacity: 0.7;
+    background-color: darkgray;
+    color: white;
+    border: 2px solid darkgray;
+    border-radius: 3em;
+    padding: 12px 9px;
+    margin: 2px 2px;
+    display: inline-block;
+}
+
+.filelabel:hover {
+    opacity: 1.0;
+    border: 2px solid lightgray;
+    cursor: pointer;
+}
+
+#filesend {
+    display: none;  /* Hide original input form */
+}
+
