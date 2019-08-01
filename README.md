@@ -1,5 +1,5 @@
 ## Installation
-docker build -t image_similarity:image_similarity .
+docker build -t image_similarity:image_similarity .  
 docker run -p 5000:5000 image_similarity
 
 ## Image Collector (e.g. collect 100 image files of banana)
