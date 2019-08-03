@@ -112,10 +112,10 @@ def main():
     # Train model
     if train is True:
         model = ISE.train(output_model_path='model/inada.model')
-        similar_image_paths = ISE.evaluation(image_file_path='dataset/test/inada1.jpg', model=model)
+        similar_image_paths = ISE.evaluation(image_file_path='dataset/test/inada.jpg', model=model)
     else:
         # Evaluate target image file with pre-trained model
-        similar_image_paths = ISE.evaluation(image_file_path='dataset/test/inada1.jpg', model_file_path='model/inada.model')
+        similar_image_paths = ISE.evaluation(image_file_path='dataset/test/inada.jpg', model_file_path='model/inada.model')
 
 
 if __name__ == "__main__":

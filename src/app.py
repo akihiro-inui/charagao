@@ -17,7 +17,7 @@ from src.image_similarity_evaluation import ImageSimilarityEvaluation
 # Init Flask app
 app = Flask(__name__)
 app.config.update(
-    STATIC_FOLDER='../static',
+    STATIC_FOLDER='src/static',
     APPLICATION_ROOT='../../',
     UPLOAD_FOLDER='dataset/tmp',
     REFERENCE_FOLDER='dataset/train',
@@ -85,6 +85,8 @@ def send():
         # Run evaluation script
         similar_image_paths = app.ISE.evaluation(image_file_path=app.config['TARGET_FILE'], model_file_path=model_file_path)
         similar_image_path = similar_image_paths[0]
+        similar_image_path = similar_image_path.replace(app.config['STATIC_FOLDER']+'/', '')
+
         os.remove(os.path.join(app.config['UPLOAD_FOLDER'], app.config['TARGET_FILE']))
         return render_template('result.html', input_image_data=input_image_data, similar_image_path=similar_image_path)
 
